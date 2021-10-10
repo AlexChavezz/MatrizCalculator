@@ -4,7 +4,10 @@
     margin:0px;
     box-sizing: border-box;
     font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
 }
+
+
 #root
 {
     width:70%;
@@ -12,7 +15,21 @@
     display:flex;
     justify-content:center;
 }
-
+.btn-primary
+{
+    background-color:#23B244;
+    border:none;
+    color:white;
+    font-weight:bold;
+    outline:none;
+    height:30px;
+    width:100px;
+    cursor:pointer;
+    &:hover
+    {
+        background-color:lightgreen;
+    }
+}
 .container
 {
     display: flex;
@@ -55,6 +72,25 @@ form{
         font-weight: bold;
     }
 }
+
+.dosXdos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.dosXdos input[type=number]
+{
+    margin:10px;
+}
+.tresXtres
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.tresXtres input[type=number]
+{
+    margin:10px;
+}
+
 
 
 @keyframes select-animation 

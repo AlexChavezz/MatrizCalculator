@@ -29,7 +29,7 @@ const selectSize = (section) => {
                 e.preventDefault();
                 const values = getValues(section);
                 const determinante = determinante2x2(values);
-                h1.innerHTML = `| A | = ${determinante}`;
+                h1.innerHTML = `|A| = ${determinante}`;
             });
 
         }else if(size.value === "3x3"){
@@ -38,7 +38,7 @@ const selectSize = (section) => {
                 e.preventDefault();
                 const values = getValues(section);
                 const determinante = determinante3x3(values);
-                h1.innerHTML = `| A | = ${determinante}`;
+                h1.innerHTML = `|A| = ${determinante}`;
             });
         }
         

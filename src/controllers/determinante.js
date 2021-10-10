@@ -1,6 +1,7 @@
 import determinantePage from '../view/determinantePage.html';
 import matriz2x2 from '../view/2x2Matriz.html';
 import matriz3x3 from '../view/3x3Matriz.html';
+import { getValues } from '../helpers/getValues';
 
 export const determinante = () => {
     const section = document.createElement('section');
@@ -8,14 +9,6 @@ export const determinante = () => {
     selectSize(section);
     return section;
 }
-
-const getValues = (section) => {
-    const values = section.querySelectorAll('.value');
-    const array = [];
-    values.forEach(value => array.push(value.value));
-    return array;
-}
-
 const selectSize = (section) => {
     const h1 = section.querySelector('h1');
     const form = section.getElementsByClassName('form');
@@ -43,42 +36,8 @@ const selectSize = (section) => {
         }else{
             divForm.innerHTML = '';
         }
-        
-    });
-  
-    
-
+    });  
 }
-
-// const eventListener = (section) => {
-//     const form = section.querySelector('.form');
-//     // form.addEventListener('submit', () => {
-//     //     console.log('hola')
-//     // });
-
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const values = getValues(section);
-//     const determinante = resolveDeterminante(values);
-//     h1.innerHTML = `| A | = ${determinante}`;
-// });
-// }
-
-// const resolveDeterminante = (values = []) => {
-
-//     let res;
-
-//     if ( values.length === 4 ) {
-//         const valueOne = parseInt(values[ 0 ]) * parseInt(values[ 3 ]);
-//         const valueTwo = parseInt(values[ 1 ]) * parseInt(values[ 2 ]);
-//         res = valueOne - valueTwo;
-//         return res;
-//     }else if( values.length === 9){
-        
-//     }
-// }
-
 const determinante2x2 = (values = []) => {
     let res;
     const valueOne = parseInt(values[ 0 ]) * parseInt(values[ 3 ]);

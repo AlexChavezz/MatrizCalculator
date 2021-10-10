@@ -6,7 +6,7 @@ export const router = ( route ) => {
     root.innerHTML = '';
 
     switch (route) {
-        case '': {
+        case '#/': {
             return root.appendChild(home());
         }
         case "#/determinante":{

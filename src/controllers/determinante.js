@@ -40,6 +40,8 @@ const selectSize = (section) => {
                 const determinante = determinante3x3(values);
                 h1.innerHTML = `|A| = ${determinante}`;
             });
+        }else{
+            divForm.innerHTML = '';
         }
         
     });

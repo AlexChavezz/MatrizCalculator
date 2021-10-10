@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="root"></section>
+    <script>
+
+        function miFunction() {
+            const select = root.querySelector('select');
+            console.log(select.value);
+            const h1 = root.querySelector('h1');
+            h1.innerHTML = `La matriz seleccionada es ${select.value}`
+        }
+    </script>
+    <script src="../src/index.js"></script>
+</body>
+
+</html>
